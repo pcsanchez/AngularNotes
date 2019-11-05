@@ -1,0 +1,30 @@
+<!-- ngOnInit is a life cycle hook -->
+<!-- When angular encounters one of our selectors, it instantiates a new component and adds it into the DOM -->
+<!-- If a new componenet is created in angular, angular goes through a couple of different phases-->
+<!-- We can hook into this phases and insert code using different hooks -->
+
+<!-- The first hook is ngOnChanges and it can be called multiple times-->
+<!-- It is excecuted right at the start during component creation -->
+<!-- It is also excecuted after a bound input property changes -->
+<!-- It is the only hook that takes an argument, which is changes: SimpleChanges -->
+
+<!-- ngOnInit is called once the component is initialized -->
+<!-- This does not mean we can see the component, the component has not been added to the DOM yet -->
+<!-- It runs after the constructor -->
+
+<!-- ngDoCheck is excecuted a lot -->
+<!-- This runs every time change detection runs -->
+<!-- Change detection is the system that angular uses to determine whether something changed inside the component to see if it needs to change something in the template -->
+<!-- A lot of times ngDoCheck runs even if nothing changes, for example after an event that changes nothing -->
+
+<!-- ngAfterContentInit is called after content (ng-content) has been projected into view -->
+
+<!-- ngAfterContentChecked is called everytime the projected content has been checked -->
+
+<!-- ngAfterViewInit is called after the component's view (and child views) has been initialized -->
+
+<!-- ngAfterViewChecked is called every time the view (and child views) have been checked -->
+
+<!-- ngOnDestroy is called once the component is about to be destroyed -->
+
+<!-- Make sure to implement these interfaces -->
