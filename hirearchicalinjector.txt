@@ -1,0 +1,10 @@
+Angulars dependency injector is a hirearchical injector
+A component and its child componenets will recieve the same instance of a service.
+Levles of Injection
+1. App Module - Same instance of Service is available Application wide.
+2. App Component - Same instance of service is available for all Components (but not for other services)
+3. Any Other Component - Same instance of service is available for the components and all its child components
+Specificity applies to services, services will overwrite according to this criteria
+If you want the service to propagate down, you must not add the service in the providers array in the child components.
+In order to inject a service into something, it has to have metadata. This is why adding services to services is different from everything else.
+Add decorator @Injectable() to the receiving service in order for this to work.
